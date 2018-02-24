@@ -223,7 +223,7 @@
                     </view>
                     <connections>
                         <outlet property="SampleFace" destination="1746" id="name-outlet-1746"/>
-                        <outlet property="SimilarityBar" destination="2655" id="name-outlet-2655"/>
+                        <outlet property="ProgressBar" destination="2655" id="name-outlet-2655"/>
                         <outlet property="liveCameraStream" destination="988" id="name-outlet-988"/>
                         <outlet property="SwitchCameraButton" destination="5535" id="name-outlet-5535"/>
                         <outlet property="ScoreLabel" destination="6866" id="name-outlet-6866"/>

@@ -25,7 +25,7 @@ namespace Mosho
         {
             base.ViewDidLoad();
             DisplaySampleFace();
-            SimilarityBar.Progress = 0f;
+            ProgressBar.Progress = 0f;
 
             // Perform any additional setup after loading the view, typically from a nib.
 
@@ -65,8 +65,15 @@ namespace Mosho
             var jpegAsByteArray = jpegImageAsNsData.ToArray();
 
             Stream stream = new MemoryStream(jpegAsByteArray);
-            ScoreLabel.Text = "...";
-            ScoreLabel.Text = (await ImageAnalyzer.AnalyzeFace(Emotion, stream)).ToString();
+
+            var result = await ImageAnalyzer.AnalyzeFace(Emotion, stream);
+            ScoreLabel.Text = "Analyzing";
+            ProgressBar.Progress = 0f;
+
+            ScoreLabel.Text = result.ToString();
+
+            ProgressBar.SetProgress((float)result, true);
+
         }
 
         async void AuthorizeCameraUse()

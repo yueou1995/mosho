@@ -20,15 +20,15 @@ namespace Mosho
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIProgressView ProgressBar { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView SampleFace { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UILabel ScoreLabel { get; set; }
-
-        [Outlet]
-        [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIProgressView SimilarityBar { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -53,6 +53,11 @@ namespace Mosho
                 liveCameraStream = null;
             }
 
+            if (ProgressBar != null) {
+                ProgressBar.Dispose ();
+                ProgressBar = null;
+            }
+
             if (SampleFace != null) {
                 SampleFace.Dispose ();
                 SampleFace = null;
@@ -61,11 +66,6 @@ namespace Mosho
             if (ScoreLabel != null) {
                 ScoreLabel.Dispose ();
                 ScoreLabel = null;
-            }
-
-            if (SimilarityBar != null) {
-                SimilarityBar.Dispose ();
-                SimilarityBar = null;
             }
 
             if (SwitchCameraButton != null) {
