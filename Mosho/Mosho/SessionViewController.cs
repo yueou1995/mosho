@@ -23,6 +23,7 @@ namespace Mosho
         {
             base.ViewDidLoad();
             DisplaySampleFace();
+            SimilarityBar.Progress = 0f;
 
             // Perform any additional setup after loading the view, typically from a nib.
             //AuthorizeCameraUse();

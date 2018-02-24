@@ -22,6 +22,10 @@ namespace Mosho
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIImageView SampleFace { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIProgressView SimilarityBar { get; set; }
+
         void ReleaseDesignerOutlets ()
         {
             if (liveCameraStream != null) {
@@ -32,6 +36,11 @@ namespace Mosho
             if (SampleFace != null) {
                 SampleFace.Dispose ();
                 SampleFace = null;
+            }
+
+            if (SimilarityBar != null) {
+                SimilarityBar.Dispose ();
+                SimilarityBar = null;
             }
         }
     }
