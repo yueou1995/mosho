@@ -25,8 +25,9 @@ namespace Mosho
             SimilarityBar.Progress = 0f;
 
             // Perform any additional setup after loading the view, typically from a nib.
-            //AuthorizeCameraUse();
-            //SetupLiveCameraStream();
+
+            AuthorizeCameraUse();
+            SetupLiveCameraStream();
         }
 
         private void DisplaySampleFace() {
