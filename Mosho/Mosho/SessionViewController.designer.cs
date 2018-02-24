@@ -26,6 +26,14 @@ namespace Mosho
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIProgressView SimilarityBar { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton SwitchCameraButton { get; set; }
+
+        [Action ("SwitchCameraButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void SwitchCameraButton_TouchUpInside (UIKit.UIButton sender);
+
         void ReleaseDesignerOutlets ()
         {
             if (liveCameraStream != null) {
@@ -41,6 +49,11 @@ namespace Mosho
             if (SimilarityBar != null) {
                 SimilarityBar.Dispose ();
                 SimilarityBar = null;
+            }
+
+            if (SwitchCameraButton != null) {
+                SwitchCameraButton.Dispose ();
+                SwitchCameraButton = null;
             }
         }
     }

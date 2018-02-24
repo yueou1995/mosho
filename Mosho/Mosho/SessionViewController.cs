@@ -113,6 +113,41 @@ namespace Mosho
             }
         }
 
+        partial void SwitchCameraButton_TouchUpInside(UIButton sender)
+        {
+            var devicePosition = captureDeviceInput.Device.Position;
+            if (devicePosition == AVCaptureDevicePosition.Front)
+            {
+                devicePosition = AVCaptureDevicePosition.Back;
+            }
+            else
+            {
+                devicePosition = AVCaptureDevicePosition.Front;
+            }
+
+            var device = GetCameraForOrientation(devicePosition);
+            ConfigureCameraForDevice(device);
+
+            captureSession.BeginConfiguration();
+            captureSession.RemoveInput(captureDeviceInput);
+            captureDeviceInput = AVCaptureDeviceInput.FromDevice(device);
+            captureSession.AddInput(captureDeviceInput);
+            captureSession.CommitConfiguration();
+        }
+
+        public AVCaptureDevice GetCameraForOrientation(AVCaptureDevicePosition orientation)
+        {
+            var devices = AVCaptureDevice.DevicesWithMediaType(AVMediaType.Video);
+            foreach (var device in devices)
+            {
+                if (device.Position == orientation)
+                {
+                    return device;
+                }
+            }
+            return null;
+        }
+
         public override void DidReceiveMemoryWarning()
         {
             base.DidReceiveMemoryWarning();
