@@ -108,6 +108,15 @@
     <Compile Include="SessionViewController.designer.cs">
       <DependentUpon>SessionViewController.cs</DependentUpon>
     </Compile>
+    <Compile Include="Emotion.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\HappyBoy.jpg" />
+    <BundleResource Include="Resources\SadBoy.jpg" />
+    <BundleResource Include="Resources\AngryBoy.jpg" />
+    <BundleResource Include="Resources\CalmBoy.jpg" />
+    <BundleResource Include="Resources\FearBoy.jpg" />
+    <BundleResource Include="Resources\TBD.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
