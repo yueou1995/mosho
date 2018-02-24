@@ -93,6 +93,12 @@
     <Reference Include="Microsoft.ProjectOxford.Emotion">
       <HintPath>..\packages\Microsoft.ProjectOxford.Emotion.2.0.40\lib\netstandard1.1\Microsoft.ProjectOxford.Emotion.dll</HintPath>
     </Reference>
+    <Reference Include="Xamarin.Cognitive.Face">
+      <HintPath>..\packages\Xamarin.Cognitive.Face.0.5.2\lib\xamarinios10\Xamarin.Cognitive.Face.dll</HintPath>
+    </Reference>
+    <Reference Include="Xamarin.Cognitive.Face.iOS">
+      <HintPath>..\packages\Xamarin.Cognitive.Face.0.5.2\lib\xamarinios10\Xamarin.Cognitive.Face.iOS.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json" />
@@ -123,7 +129,6 @@
     </Compile>
     <Compile Include="Emotion.cs" />
     <Compile Include="ImageAnalyzer.cs" />
-    <Compile Include="ImageAnalyzer2.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\HappyBoy.jpg" />

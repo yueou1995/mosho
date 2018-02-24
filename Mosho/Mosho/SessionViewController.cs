@@ -33,7 +33,7 @@ namespace Mosho
         }
 
         private async void UpdateScore() {
-            ScoreLabel.Text = (await ImageAnalyzer.Analyze(Emotion.Sad)).ToString();
+            ScoreLabel.Text = (await ImageAnalyzer.AnalyzeFace(Emotion.Sad)).ToString();
         }
 
         private void DisplaySampleFace() {
