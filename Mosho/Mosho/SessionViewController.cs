@@ -28,6 +28,12 @@ namespace Mosho
 
             AuthorizeCameraUse();
             SetupLiveCameraStream();
+            UpdateScore();
+
+        }
+
+        private async void UpdateScore() {
+            ScoreLabel.Text = (await ImageAnalyzer.Analyze(Emotion.Sad)).ToString();
         }
 
         private void DisplaySampleFace() {

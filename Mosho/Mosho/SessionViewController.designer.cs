@@ -24,6 +24,10 @@ namespace Mosho
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UILabel ScoreLabel { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIProgressView SimilarityBar { get; set; }
 
         [Outlet]
@@ -44,6 +48,11 @@ namespace Mosho
             if (SampleFace != null) {
                 SampleFace.Dispose ();
                 SampleFace = null;
+            }
+
+            if (ScoreLabel != null) {
+                ScoreLabel.Dispose ();
+                ScoreLabel = null;
             }
 
             if (SimilarityBar != null) {
