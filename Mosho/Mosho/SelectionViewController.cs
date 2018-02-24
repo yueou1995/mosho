@@ -1,12 +1,13 @@
-﻿using System;
+using System;
 
 using UIKit;
 
 namespace Mosho
 {
-    public partial class ViewController : UIViewController
+    public partial class SelectionViewController : UIViewController
     {
-        protected ViewController(IntPtr handle) : base(handle)
+
+        protected SelectionViewController(IntPtr handle) : base(handle)
         {
             // Note: this .ctor should not contain any initialization logic.
         }
