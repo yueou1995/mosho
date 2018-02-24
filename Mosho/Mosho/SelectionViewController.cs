@@ -15,6 +15,13 @@ namespace Mosho
         {
             base.ViewDidLoad();
             // Perform any additional setup after loading the view, typically from a nib.
+
+            HappyIcon.Image = UIImage.FromBundle("happy_BlackBgd.jpg");
+            SadIcon.Image = UIImage.FromBundle("sad_blackBgd.jpg");
+            AngryIcon.Image = UIImage.FromBundle("angry_blackBgd.jpg");
+            FearIcon.Image = UIImage.FromBundle("fear_blackBgd.jpg");
+            CalmIcon.Image = UIImage.FromBundle("calm_blackBgd.jpg");
+            DisgustIcon.Image = UIImage.FromBundle("disgust_blackBgd.jpg");
         }
 
         partial void TBDButton_TouchUpInside(UIButton sender)

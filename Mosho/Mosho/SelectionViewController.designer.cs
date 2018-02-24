@@ -20,7 +20,23 @@ namespace Mosho
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView AngryIcon { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton CalmButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView CalmIcon { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton DisgustButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView DisgustIcon { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -28,7 +44,15 @@ namespace Mosho
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView FearIcon { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton HappyButton { get; set; }
+
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIImageView HappyIcon { get; set; }
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -36,7 +60,7 @@ namespace Mosho
 
         [Outlet]
         [GeneratedCode ("iOS Designer", "1.0")]
-        UIKit.UIButton TBDButton { get; set; }
+        UIKit.UIImageView SadIcon { get; set; }
 
         [Action ("AngryButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
@@ -69,9 +93,29 @@ namespace Mosho
                 AngryButton = null;
             }
 
+            if (AngryIcon != null) {
+                AngryIcon.Dispose ();
+                AngryIcon = null;
+            }
+
             if (CalmButton != null) {
                 CalmButton.Dispose ();
                 CalmButton = null;
+            }
+
+            if (CalmIcon != null) {
+                CalmIcon.Dispose ();
+                CalmIcon = null;
+            }
+
+            if (DisgustButton != null) {
+                DisgustButton.Dispose ();
+                DisgustButton = null;
+            }
+
+            if (DisgustIcon != null) {
+                DisgustIcon.Dispose ();
+                DisgustIcon = null;
             }
 
             if (FearButton != null) {
@@ -79,9 +123,19 @@ namespace Mosho
                 FearButton = null;
             }
 
+            if (FearIcon != null) {
+                FearIcon.Dispose ();
+                FearIcon = null;
+            }
+
             if (HappyButton != null) {
                 HappyButton.Dispose ();
                 HappyButton = null;
+            }
+
+            if (HappyIcon != null) {
+                HappyIcon.Dispose ();
+                HappyIcon = null;
             }
 
             if (SadButton != null) {
@@ -89,9 +143,9 @@ namespace Mosho
                 SadButton = null;
             }
 
-            if (TBDButton != null) {
-                TBDButton.Dispose ();
-                TBDButton = null;
+            if (SadIcon != null) {
+                SadIcon.Dispose ();
+                SadIcon = null;
             }
         }
     }

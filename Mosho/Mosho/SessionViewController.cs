@@ -31,6 +31,7 @@ namespace Mosho
 
             AuthorizeCameraUse();
             SetupLiveCameraStream();
+            SwitchCameraButton_TouchUpInside(null);
         }
 
         private void DisplaySampleFace() {
@@ -70,7 +71,7 @@ namespace Mosho
             ScoreLabel.Text = "Analyzing";
             ProgressBar.Progress = 0f;
 
-            ScoreLabel.Text = result.ToString();
+            ScoreLabel.Text = "Your score: " + result.ToString("P0");
 
             ProgressBar.SetProgress((float)result, true);
 

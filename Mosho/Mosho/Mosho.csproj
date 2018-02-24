@@ -137,6 +137,12 @@
     <BundleResource Include="Resources\CalmBoy.jpg" />
     <BundleResource Include="Resources\FearBoy.jpg" />
     <BundleResource Include="Resources\TBD.jpg" />
+    <BundleResource Include="Resources\angry_blackBgd.jpg" />
+    <BundleResource Include="Resources\calm_blackBgd.jpg" />
+    <BundleResource Include="Resources\fear_blackBgd.jpg" />
+    <BundleResource Include="Resources\happy_BlackBgd.jpg" />
+    <BundleResource Include="Resources\sad_blackBgd.jpg" />
+    <BundleResource Include="Resources\disgust_blackBgd.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
 </Project>
