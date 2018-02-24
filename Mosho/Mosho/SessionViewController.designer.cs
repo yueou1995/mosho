@@ -34,9 +34,17 @@ namespace Mosho
         [GeneratedCode ("iOS Designer", "1.0")]
         UIKit.UIButton SwitchCameraButton { get; set; }
 
+        [Outlet]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        UIKit.UIButton TakePhotoButton { get; set; }
+
         [Action ("SwitchCameraButton_TouchUpInside:")]
         [GeneratedCode ("iOS Designer", "1.0")]
         partial void SwitchCameraButton_TouchUpInside (UIKit.UIButton sender);
+
+        [Action ("TakePhotoButton_TouchUpInside:")]
+        [GeneratedCode ("iOS Designer", "1.0")]
+        partial void TakePhotoButton_TouchUpInside (UIKit.UIButton sender);
 
         void ReleaseDesignerOutlets ()
         {
@@ -63,6 +71,11 @@ namespace Mosho
             if (SwitchCameraButton != null) {
                 SwitchCameraButton.Dispose ();
                 SwitchCameraButton = null;
+            }
+
+            if (TakePhotoButton != null) {
+                TakePhotoButton.Dispose ();
+                TakePhotoButton = null;
             }
         }
     }

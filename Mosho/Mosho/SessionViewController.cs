@@ -2,11 +2,14 @@ using Foundation;
 using System;
 using UIKit;
 using AVFoundation;
+using System.IO;
 
 namespace Mosho
 {
     public partial class SessionViewController : UIViewController
     {
+       
+
         public static Emotion Emotion { get; set; }
 
         AVCaptureSession captureSession;
@@ -28,12 +31,6 @@ namespace Mosho
 
             AuthorizeCameraUse();
             SetupLiveCameraStream();
-            UpdateScore();
-
-        }
-
-        private async void UpdateScore() {
-            ScoreLabel.Text = (await ImageAnalyzer.AnalyzeFace(Emotion.Sad)).ToString();
         }
 
         private void DisplaySampleFace() {
@@ -57,6 +54,19 @@ namespace Mosho
                     SampleFace.Image = UIImage.FromBundle("TBD.jpg");
                     break;
             }
+        }
+
+        async partial void TakePhotoButton_TouchUpInside(UIButton sender)
+        {
+            var videoConnection = stillImageOutput.ConnectionFromMediaType(AVMediaType.Video);
+            var sampleBuffer = await stillImageOutput.CaptureStillImageTaskAsync(videoConnection);
+
+            var jpegImageAsNsData = AVCaptureStillImageOutput.JpegStillToNSData(sampleBuffer);
+            var jpegAsByteArray = jpegImageAsNsData.ToArray();
+
+            Stream stream = new MemoryStream(jpegAsByteArray);
+            ScoreLabel.Text = "...";
+            ScoreLabel.Text = (await ImageAnalyzer.AnalyzeFace(Emotion, stream)).ToString();
         }
 
         async void AuthorizeCameraUse()

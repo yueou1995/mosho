@@ -185,12 +185,21 @@
                                 <color key="backgroundColor" colorSpace="calibratedWhite" white="0.666666666666667" alpha="1"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5535" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
-                                        <rect key="frame" x="106" y="108" width="163" height="153"/>
+                                        <rect key="frame" x="8" y="43" width="123" height="226"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="0.49803921568627452" blue="0" alpha="1"/>
                                         <state key="normal" title="Flip"/>
                                         <connections>
                                             <action selector="SwitchCameraButton_TouchUpInside:" destination="309" id="5536" eventType="touchUpInside"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9046" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                                        <rect key="frame" x="246" y="43" width="109" height="219"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" colorSpace="calibratedRGB" red="1" green="1" blue="0" alpha="1"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="TakePhotoButton_TouchUpInside:" destination="309" id="9047" eventType="touchUpInside"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -218,6 +227,7 @@
                         <outlet property="liveCameraStream" destination="988" id="name-outlet-988"/>
                         <outlet property="SwitchCameraButton" destination="5535" id="name-outlet-5535"/>
                         <outlet property="ScoreLabel" destination="6866" id="name-outlet-6866"/>
+                        <outlet property="TakePhotoButton" destination="9046" id="name-outlet-9046"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="311" userLabel="First Responder" sceneMemberID="firstResponder"/>
